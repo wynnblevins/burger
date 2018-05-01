@@ -1,0 +1,19 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "An mvc application using node, mysql, handlebars, and a homemade orm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wynnblevins/burger.git"
+  },
+  "author": "Wynn Blevins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wynnblevins/burger/issues"
+  },
+  "homepage": "https://github.com/wynnblevins/burger#readme"
+}
