@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wynnblevins/burger/issues"
   },
-  "homepage": "https://github.com/wynnblevins/burger#readme"
+  "homepage": "https://github.com/wynnblevins/burger#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
