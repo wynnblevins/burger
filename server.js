@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 require('./config/connection.js')(app);
 require('./routing/apiRouting.js')(app);
+require('./routing/apiBurgerEndpoints.js')(app);
 
 app.use(express.static(path.resolve('./public')));
 
