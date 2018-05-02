@@ -12,4 +12,6 @@ app.use(bodyParser.json());
 require('./config/connection.js')(app);
 require('./routing/apiRouting.js')(app);
 
+app.use(express.static(path.resolve('./public')));
+
 app.listen(PORT, () => console.log(`burger app listening on port ${PORT}`));
