@@ -19,7 +19,5 @@ var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
 app.use('/public', express.static(__dirname + "/public"))
-
 app.listen(PORT, () => console.log(`burger app listening on port ${PORT}`));
