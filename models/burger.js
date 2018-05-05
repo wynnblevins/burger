@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-var connection = new Sequelize('burger_db', 'root', 'Nowuckinfurries3612', {
+var connection = new Sequelize('burger_db', 'root', '', {
     host: 'localhost',
     dialect: 'mysql',
     pool: {
@@ -14,6 +14,8 @@ var connection = new Sequelize('burger_db', 'root', 'Nowuckinfurries3612', {
 var Burger = connection.define('burger', {
     devoured: Sequelize.BOOLEAN,
     burger_name: Sequelize.STRING
+}, {
+    timestamps: false
 });
 
 connection.sync();

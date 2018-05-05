@@ -6,11 +6,15 @@
     </div>
 </div>
 <div class="row">
-    <div id="notEatenSection" class="col-6">
-
+    <div id="uneatenSection" class="col-6">
+        {{#each eatenBurgers}}
+            {{ this }}
+        {{/each}}
     </div>
     <div id="eatenSection" class="col-6">
-        
+        {{#each uneatenBurgers}}
+            {{ this }}
+        {{/each}}
     </div>
 </div>
 <div class="row">
