@@ -1,7 +1,5 @@
 const db = require('../models');
-
 const bodyParser = require("body-parser");
-
 
 module.exports = function (app) {
     /** bodyParser.urlencoded(options)
