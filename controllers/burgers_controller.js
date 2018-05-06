@@ -34,7 +34,18 @@ module.exports = function (app) {
         }); 
     });
 
-    app.put('/api/burger', (req, res) => {
-        console.log('Inside burgers PUT endpoint');
+    app.put('/api/burger/:id', (req, res) => {
+        db.Burger.find({ where: {id: req.params.id} })
+            .then((burger) => {
+            db.Burger.update(
+                { 
+                    burger_name: burger.burger_name,
+                    devoured: true
+                },
+                { where: { id: burger.id } }
+            ).then((result) => {
+                res.send(result);
+            });
+        });
     });
 };
