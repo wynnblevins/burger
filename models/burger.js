@@ -1,7 +1,5 @@
-const Sequelize = require('sequelize');
-
 module.exports = function(sequelize, DataTypes) {
-    var Burger = connection.define('burger', {
+    var Burger = sequelize.define("Burger", {
         devoured: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
@@ -13,4 +11,5 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         timestamps: false
     });
+    return Burger;
 };

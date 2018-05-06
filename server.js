@@ -4,8 +4,8 @@ var mysql = require("mysql");
 
 var app = express();
 
-require('./controllers/burgers_controller.js')(app);
-require('./controllers/html_endpoints.js')(app);
+
+var db = require('./models');
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -20,4 +20,15 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use('/public', express.static(__dirname + "/public"))
-app.listen(PORT, () => console.log(`burger app listening on port ${PORT}`));
+
+require('./controllers/burgers_controller.js')(app);
+require('./controllers/html_endpoints.js')(app);
+
+
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: true }).then(function() {
+    app.listen(PORT, function() {
+      console.log("App listening on PORT " + PORT);
+    });
+});
