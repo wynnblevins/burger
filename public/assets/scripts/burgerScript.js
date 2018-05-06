@@ -28,7 +28,7 @@
                     devoured: true,
                     burger_name: clickItem.data('name')
                 }  
-            }, (data, status) => {
+            }).done(() => {
                 init();
             });
         }); 
