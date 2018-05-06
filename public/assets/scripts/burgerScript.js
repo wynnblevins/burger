@@ -3,6 +3,7 @@
 
     var $eatenSection = $('#eatenSection');
     var $uneatenSection = $('#uneatenSection');
+    var $burgerInput = $('#burgerInput');
     var burgerEndpoint = 'http://localhost:8080/api/burger';
 
     $(document).ready(function () {
@@ -12,6 +13,7 @@
             $.post(burgerEndpoint, {
                 burger_name: $burgerInput.val()
             }, function (data, status) {
+                $burgerInput.val('');
                 init();
             });  
         });
@@ -29,6 +31,7 @@
                     burger_name: clickItem.data('name')
                 }  
             }).done(() => {
+                // reloading the page
                 init();
             });
         }); 
