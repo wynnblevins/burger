@@ -18,8 +18,7 @@ module.exports = function (app) {
     app.use(bodyParser.json());    
     
     app.get('/api/burger', (req, res) => {
-        
-        return db.Burger.findAll({}).then(function (burgers) {
+        db.Burger.findAll({}).then(function (burgers) {
             res.send(burgers);
         }); 
     });
@@ -31,7 +30,6 @@ module.exports = function (app) {
         };
         
         db.Burger.create(newBurger).then(function (burger) {
-            console.log('New Burger: ' + burger);
             res.send(burger);
         }); 
     });

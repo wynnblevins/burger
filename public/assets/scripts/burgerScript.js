@@ -1,6 +1,9 @@
 (function ($) {
     'use strict';
-    
+
+    var $eatenSection = $('#eatenSection');
+    var $uneatenSection = $('#uneatenSection');
+
     $(document).ready(function () {
         var $burgerInput = $('#burgerInput');
         
@@ -15,14 +18,26 @@
             });  
         });
 
+        function createBurgerDiv(burger) {
+            // decide where to append the burger div...
+            if (burger.devoured) {
+                $eatenSection.append(`<div>${burger.burger_name}</div>`)
+            } else {
+                $uneatenSection.append(`<div>${burger.burger_name}</div>`)
+            }
+        }
+
         function init() {
+            $eatenSection.empty();
+            $uneatenSection.empty();
+            
             $.get('http://localhost:8080/api/burger', function (data) {
-                console.log('inside GET success handler.');
-                console.log('data is: ' + data);
+                for (var i = 0; i < data.length; i++) {
+                    createBurgerDiv(data[i]);
+                }
             });
         }
 
         init();
     });    
 })($);
-
