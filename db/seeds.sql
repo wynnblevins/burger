@@ -1,6 +1,6 @@
-use burger_db;
+USE burger_db;
 
--- insert into Burgers (devoured, burger_name) values (0, "bacon cheeseburger");
--- insert into Burgers (devoured, burger_name) values (0, "veggie cheeseburger");
--- insert into Burgers (devoured, burger_name) values (1, "big mac");
--- insert into Burgers (devoured, burger_name) values (1, "whopper");
+INSERT INTO Burgers (devoured, burger_name) VALUES (0, "bacon cheeseburger");
+INSERT INTO Burgers (devoured, burger_name) VALUES (0, "veggie burger");
+INSERT INTO Burgers (devoured, burger_name) VALUES (0, "whopper");
+INSERT INTO Burgers (devoured, burger_name) VALUES (0, "big mac");
