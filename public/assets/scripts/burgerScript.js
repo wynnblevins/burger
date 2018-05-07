@@ -40,7 +40,7 @@
             // decide where to append the burger div...
             if (burger.devoured) {
                 $eatenSection.append(`
-                    <div class="row">
+                    <div class="row burgerRow">
                         <div class="col-12">
                             <div class="card card-body bg-light">${burger.burger_name}</div>
                         </div>
@@ -48,7 +48,7 @@
                 `);
             } else {
                 $uneatenSection.append(`
-                    <div class="row">
+                    <div class="row burgerRow">
                         <div class="col-8">
                             <div class="card card-body bg-light">${burger.burger_name}</div>
                         </div>    
