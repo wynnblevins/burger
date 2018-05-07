@@ -4,7 +4,7 @@
     var $eatenSection = $('#eatenSection');
     var $uneatenSection = $('#uneatenSection');
     var $burgerInput = $('#burgerInput');
-    var burgerEndpoint = 'http://localhost:8080/api/burger';
+    var burgerEndpoint = '/api/burger';
 
     $(document).ready(function () {
         var $burgerInput = $('#burgerInput');
