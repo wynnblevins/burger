@@ -7,7 +7,7 @@ module.exports = function (app) {
     app.get('/index', function (req, res) {
         request({
             "method":"GET", 
-            "uri": "http://localhost:8080/api/burger",
+            "uri": "/api/burger",
             "json": true
         }).then(function (burgers) {
             console.log(burgers);
