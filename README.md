@@ -16,11 +16,10 @@ node server.js
 This command will spin up a local node server and serve your application on [localhost:8080](http://localhost:8080) 
 
 ### Wiping the Database
-For convenience purposes, if the developer wants to hava a fresh reinstall (ie wipe all data in the burgers table) of their local burger_db database, then they can run the application with freshDb argument.  For example:
+For convenience purposes, if the developer wants to hava a fresh reinstall of their local burger_db database (ie wipe all data in the burgers table), then they can run the application with freshDb argument.  For example:
 ```
 node server.js freshDb
 ```   
 
 ## Live Heroku Deployment
 Currently the Eat-Da-Burger! application is deployed on heroku [here](https://shrouded-ravine-64865.herokuapp.com/)
-
