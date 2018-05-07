@@ -1,7 +1,11 @@
 .burgerInput {
-    height: 100px    
+    height: 100px;    
 }
 
 .salmon {
-    background-color: #FFC35C    
+    background-color: #FFC35C;    
+}
+
+.burgersSection {
+    margin-bottom: 10px;
 }
